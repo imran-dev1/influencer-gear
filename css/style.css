@@ -43,6 +43,13 @@ text-decoration: none;
     margin-left:5px;
     margin-bottom:-3px;
 }
+.section_title{
+    text-align: center;
+    font-weight:500;
+    font-size:35px;
+    margin-bottom:40px;
+    margin-top:0;
+}
 
 /* ----------------
     Header Style 
@@ -115,12 +122,20 @@ text-decoration: none;
 /* ----------------------
     Brand Logos Styles
 -------------------------- */
-#brand_logos .container{
+#brand_logos{
+    padding:50px 0;
+}
+#brand_logos .logos{
     display:grid;
     grid-template-columns: repeat(6,1fr);
     align-items: center;
-    justify-items: center;;
+    justify-items: center;
     grid-column-gap: 20px;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-image: linear-gradient( 90deg,#e02c6e0e,#e02c6e52,#e02c6e0e);
+    border-image-slice: 1;
+    padding:20px 0;
 }
 
 }
@@ -128,6 +143,80 @@ text-decoration: none;
     max-width:100px;
     padding:10px;
 }
+
+/* ----------------------
+    Popular Product Styles
+-------------------------- */
+
+.product_grids{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;;
+}
+.product_grids .single_grid{
+    box-shadow: 0px 5.34229px 46px #00000015;
+    padding:20px;
+    border-radius:10px;
+}
+.single_grid:hover{
+    box-shadow: 0px 5.34229px 46px #00000029;
+    cursor:pointer;
+}
+.single_grid img{
+    width:100%;
+    transition: 1.5s ease;
+}
+.image{
+    overflow: hidden;
+    display:flex;
+}
+.single_grid:hover > .image img{
+    transform: scale(1.2);
+}
+.product_name{
+    font-weight:400;
+    font-size:1.3em;
+    margin:15px 0;
+}
+.price{
+    font-size:1.3em;
+}
+.ratings span {
+    margin-left: 10px;
+}
+.ratings {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+.ratings ion-icon{
+    color:#FB8200;
+}
+.product_info li{
+    list-style: none;
+    margin-top:7px;
+    color:rgb(114, 114, 114);
+
+}
+.bottom_button{
+    margin-top:30px;
+    text-align:right;
+}
+.button.see_more{
+    background-color: transparent;
+    color: var(--primary-color);
+    font-weight:500;
+    padding:0;
+    font-size:1.2em;
+}
+.button.see_more .right_arrow{
+    color: var(--primary-color);
+    font-size:1.2em;
+}
+
+
+
+
 /* ----------------------
     Media Queries
 -------------------------- */
@@ -151,6 +240,7 @@ text-decoration: none;
         order:2;
         padding-right:0;
         padding-top:30px;
+        text-align:center;
     }
     .texts_content h1{
         font-size:2em;
@@ -161,9 +251,13 @@ text-decoration: none;
     .image_content{
         order:1;
     }
-    #brand_logos .container{
+    #brand_logos .logos{
     grid-template-columns: repeat(3,1fr);
     grid-gap: 20px;
+    }
+    .product_grids{
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 30px;;
 }
    
 }
