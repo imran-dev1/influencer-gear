@@ -308,7 +308,8 @@ footer .container{
     background:#444444;
     padding:7px;
     border-radius: 20px;
-    margin:5px
+    margin:5px;
+    cursor:pointer;
 }
 /* ----------------------
     Media Queries
