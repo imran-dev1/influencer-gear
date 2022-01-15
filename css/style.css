@@ -84,6 +84,12 @@ border:2px solid var(--primary-color);
     text-decoration: none;
     padding: 10px
 }
+.menu_item a:hover{
+    color:var(--primary-color);
+}
+.menu_item a:hover ion-icon{
+    color:var(--primary-color);
+}
 .cart{
     padding-right:0px;
 }
@@ -263,12 +269,15 @@ border:2px solid var(--primary-color);
 }
 .p_price{
     font-size:40px;
-    margin-top:10px
+    margin-top:10px;
+    margin-bottom:10px;
 }
 .shopping_bag{
     margin-right:10px;
 }
-
+.buttons{
+    display:flex;
+}
 .shopping_bag .bag{
     --ionicon-stroke-width: 36px;
     font-size:20px
@@ -314,6 +323,22 @@ footer .container{
 /* ----------------------
     Media Queries
 -------------------------- */
+@media screen and (max-width: 354px){
+   .buttons{
+        display:inline-block;
+        margin-top:15px;
+   }
+   #brand_logos .logos{
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 20px;
+    }
+}
+@media screen and (min-width: 355px) and (max-width: 655px){
+     #brand_logos .logos{
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 20px;
+    }
+}
 @media screen and (max-width: 655px){
     .desktop_navbar{
         display:none;
@@ -344,10 +369,6 @@ footer .container{
     }
     .image_content{
         order:1;
-    }
-    #brand_logos .logos{
-        grid-template-columns: repeat(3,1fr);
-        grid-gap: 20px;
     }
     .product_grids{
         grid-template-columns: repeat(1,1fr);
