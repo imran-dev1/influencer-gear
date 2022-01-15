@@ -411,7 +411,7 @@ footer .container{
         font-size:2em;
     }
     .texts_content p{
-        padding-right:0;
+        padding: 0 15%;
     }
     .image_content{
         order:1;
